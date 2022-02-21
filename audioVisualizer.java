@@ -13,6 +13,9 @@ public class audioVisualizer extends JComponent {
     }
 
     protected void paintComponent(Graphics g) {
+        // getMixerInfo getMixerInfo = new getMixerInfo();
+        // getMixerInfo.getAudio();
+
         java.awt.Dimension s = getSize();
         int width = s.width;
         int height = s.height;
@@ -23,10 +26,11 @@ public class audioVisualizer extends JComponent {
         g2d.setColor(Color.black);
         g2d.fill(bg);
 
-        int colorCount = 64; // This number cannot be greater than 64
+        int colorCount = 16; // This number cannot be greater than 64
         int tileWidth = width / 100;
         int tileHeight = height / colorCount;
         double spacing = 1;
+
 
         int startRed = 128;
         int startGreen = 192;
@@ -39,6 +43,7 @@ public class audioVisualizer extends JComponent {
         int endRed = 192;
         int endGreen = 128;
         int endBlue = 255;
+
 
         // g2d.setStroke(new BasicStroke(4));
         if (height > colorCount) {
@@ -59,6 +64,6 @@ public class audioVisualizer extends JComponent {
                 blue = startBlue;
             }
         }
-        repaint();
+        // repaint();
     }
 }
